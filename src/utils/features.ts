@@ -1,12 +1,8 @@
-import mongoose from "mongoose";
-import { InvalidateCacheProps, OrderItemType } from "../types/types.js";
-import { Product } from "../modals/product.js";
+import mongoose, { Document } from "mongoose";
 import { myCache } from "../app.js";
-// interface MyDocument {
-//   createdAt: Date;
-//   [key: string]: any;
-//   // Add other properties if needed
-// }
+import { Product } from "../modals/product.js";
+import { InvalidateCacheProps, OrderItemType } from "../types/types.js";
+
 export const connectDB = (uri: string) => {
   mongoose
     .connect(uri, {
